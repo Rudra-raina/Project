@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.ui.activities.SettingsActivity">
+
+
+    <ImageView
+        android:id="@+id/tv_settings"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_settings_24"
+        android:contentDescription="@string/settingsIcon" />
+
+    <com.example.shopperista.utils.CustomTextViewStyleBold
+        android:id="@+id/tv_Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="#878787"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        android:paddingTop="30dp" />
+
+    <com.example.shopperista.utils.CustomTextViewStyleBold
+        android:id="@+id/tv_welcome_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Rudra"
+        android:textColor="#222934"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_settings"
+        app:layout_constraintStart_toEndOf="@id/tv_Welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        android:paddingTop="30dp" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Welcome"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_settings_user_photo"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_user_placeholder"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.56"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_settings_user_photo"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/first_name"
+                        android:contentDescription="@string/first_name" />
+
+                    <com.example.shopperista.utils.CustomTextViewStyle
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textColor="#878787"
+                        android:textSize="16sp"
+                        android:layout_marginTop="13dp"
+
+                        tools:text="Rudra Raina"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/gender"
+                        android:contentDescription="@string/first_name" />
+
+                    <com.example.shopperista.utils.CustomTextViewStyle
+                        android:id="@+id/tv_gender"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textColor="#878787"
+                        android:textSize="16sp"
+                        android:layout_marginTop="18dp"
+                        tools:text="Non-binary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/email"
+                        android:contentDescription="@string/first_name" />
+
+                    <com.example.shopperista.utils.CustomTextViewStyle
+                        android:id="@+id/tv_email_settings"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textColor="#878787"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        tools:text="rainarudra31@gmail.com"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/phone_two"
+                        android:contentDescription="@string/first_name" />
+                    <com.example.shopperista.utils.CustomTextViewStyle
+                        android:id="@+id/tv_mobile_number"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textColor="#878787"
+                        android:textSize="16sp"
+                        android:layout_marginTop="17dp"
+                        tools:text="7827865628"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/item_grey_border_background"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.example.shopperista.utils.CustomTextViewStyle
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/address"
+                        android:textColor="#989898"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_vector_chevron_right"
+                        android:contentDescription="@string/selectAddress" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.example.shopperista.utils.CustomTextViewStyle
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintHorizontal_bias="0.92"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#989898"
+        android:textSize="14sp"
+        android:text="@string/edit"/>
+
+    <com.example.shopperista.utils.CustomButton
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_background"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

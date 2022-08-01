@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "176224967947",
+    "project_id": "shopperista-977b0",
+    "storage_bucket": "shopperista-977b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176224967947:android:ab658bda9439594edb160e",
+        "android_client_info": {
+          "package_name": "com.example.shopperista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176224967947-m9lsjo8p7p0nlsum8njebti9rte8rp5i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopperista",
+            "certificate_hash": "2e5c36a6e0b41f2800f24966ea2e8983004c86e8"
+          }
+        },
+        {
+          "client_id": "176224967947-2gul0onsg9qukrdd93bp0q1ad3h1ep28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzx4QJnsC0FPSp1SlN5Y3-_faNE0aCyjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176224967947-2gul0onsg9qukrdd93bp0q1ad3h1ep28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

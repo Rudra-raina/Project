@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.ui.activities.ProductDetailsActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_product_photo"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/image" />
+
+
+            <com.example.shopperista.utils.CustomTextViewStyleBold
+                android:id="@+id/title_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Adidas Football"
+                android:textColor="#222934"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_product_photo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:paddingTop="30dp" />
+
+            <com.example.shopperista.utils.CustomTextViewStyle
+                android:id="@+id/description_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#222934"
+                android:textSize="16sp"
+                android:text="@string/a_beautiful_item_to_have_makes_life_easy"
+                app:layout_constraintTop_toBottomOf="@id/title_details"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingTop="10dp" />
+
+            <com.example.shopperista.utils.CustomTextViewStyleBold
+                android:id="@+id/price_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rs. 500"
+                android:textColor="#222934"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@id/description_details"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingTop="30dp" />
+
+            <com.example.shopperista.utils.CustomTextViewStyle
+                android:id="@+id/quantity_details"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                tools:text="In Stock : 5"
+                android:textColor="#222934"
+                android:textSize="16sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center"
+
+                app:layout_constraintTop_toBottomOf="@id/description_details"
+                app:layout_constraintStart_toEndOf="@id/price_details"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="120dp"/>
+
+
+            <com.example.shopperista.utils.CustomButton
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/price_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/button_background"
+                />
+
+            <com.example.shopperista.utils.CustomButton
+                android:id="@+id/btn_go_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/go_to_cart"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/btn_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/button_background"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+
+
+</ScrollView>

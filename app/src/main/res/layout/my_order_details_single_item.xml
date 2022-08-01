@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="@color/progress"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_my_order_details_single_item"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.example.shopperista.utils.CustomTextViewStyleBold
+        android:id="@+id/tv_my_order_details_single_item_title"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:textSize="16sp"
+        tools:text="Headphones"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_my_order_details_single_item"/>
+
+    <com.example.shopperista.utils.CustomTextViewStyle
+        android:id="@+id/tv_my_order_details_single_price"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:textSize="16sp"
+        tools:text="₹ 10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_my_order_details_single_item"/>
+
+
+    <com.example.shopperista.utils.CustomTextViewStyle
+        android:id="@+id/tv_my_order_details_single_cart_quantity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/subtract"
+        android:layout_marginTop="65dp"
+        tools:text="1"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

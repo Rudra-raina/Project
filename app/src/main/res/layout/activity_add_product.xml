@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_add_product_activity"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <com.example.shopperista.utils.CustomTextViewStyleBold
+                android:id="@+id/got_an_amazing_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/got_an_amazing_product"
+                android:textColor="#222934"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/toolbar_add_product_activity"/>
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/iv_product_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/got_an_amazing_product"
+
+                android:src="@drawable/add_product"
+                android:contentDescription="@string/product_image_content" />
+<!--            android:background="@drawable/user_img_bg"-->
+            <ImageView
+                android:id="@+id/iv_add_update_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vector_add_photo"
+                app:layout_constraintStart_toStartOf="@id/iv_product_image"
+                app:layout_constraintEnd_toEndOf="@id/iv_product_image"
+                app:layout_constraintTop_toTopOf="@id/iv_product_image"
+                app:layout_constraintBottom_toBottomOf="@id/iv_product_image"
+                app:layout_constraintHorizontal_bias=".9"
+                app:layout_constraintVertical_bias=".9"
+                android:contentDescription="@string/add_update_product_image"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/add_product_icon"
+                app:layout_constraintStart_toEndOf="@id/iv_product_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/got_an_amazing_product"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="30dp"
+                android:scaleX="-1"
+                android:contentDescription="@string/icon_product" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_product_title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/product_title"
+                android:textColorHint="@color/colorSecondaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_product_image">
+
+                <com.example.shopperista.utils.CustomEditText
+                    android:id="@+id/et_product_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLength="14"
+                    android:padding="@dimen/et_padding"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/et_textSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_product_price"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/product_price"
+                android:textColorHint="@color/colorSecondaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_product_title">
+
+                <com.example.shopperista.utils.CustomEditText
+                    android:id="@+id/et_product_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="@dimen/et_padding"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/et_textSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_product_description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/product_description"
+                android:textColorHint="@color/colorSecondaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_product_price">
+
+                <com.example.shopperista.utils.CustomEditText
+                    android:id="@+id/et_product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:padding="@dimen/et_padding"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/et_textSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_product_quantity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/product_quantity"
+                android:textColorHint="@color/colorSecondaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_product_description">
+
+                <com.example.shopperista.utils.CustomEditText
+                    android:id="@+id/et_product_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="@dimen/et_padding"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/et_textSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_add_product"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/til_product_quantity"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <com.example.shopperista.utils.CustomRadioButton
+                    android:id="@+id/rb_electronics_add_product"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+                    android:background="@drawable/button_background_radio"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/electronics"
+                    android:textColor="#222934"
+                    tools:ignore="SmallSp" />
+
+                <com.example.shopperista.utils.CustomRadioButton
+                    android:id="@+id/rb_apparels_add_product"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_radio"
+                    android:button="@null"
+                    android:checked="false"
+                    android:textSize="8sp"
+                    android:gravity="center"
+                    android:text="@string/apparels"
+                    android:textColor="#222934"
+                    tools:ignore="SmallSp" />
+
+
+                <com.example.shopperista.utils.CustomRadioButton
+                    android:id="@+id/rb_sports_add_product"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_radio"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:textSize="8sp"
+                    android:text="@string/sports"
+                    android:textColor="#222934"
+                    tools:ignore="SmallSp" />
+
+                <com.example.shopperista.utils.CustomRadioButton
+                    android:id="@+id/rb_stationery_add_product"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_radio"
+                    android:button="@null"
+                    android:textSize="8sp"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="@string/stationery"
+                    android:textColor="#222934"
+                    tools:ignore="SmallSp" />
+
+            </RadioGroup>
+
+            <com.example.shopperista.utils.CustomButton
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/rg_add_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/button_background"
+                />
+
+            <com.example.shopperista.utils.CustomButton
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:padding="10dp"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
