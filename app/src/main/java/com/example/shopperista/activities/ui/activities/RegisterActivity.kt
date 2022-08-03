@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
 import com.example.shopperista.R
 import com.example.shopperista.firestore.FirestoreClass
 import com.example.shopperista.models.User
@@ -122,8 +123,10 @@ class RegisterActivity : Base(){
     }
 
     fun userRegistrationSuccess(){
+        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+        startActivity(intent)
         hideProgressDialog()
-        showErrorSnackBar("You are registered successfully")
+        Toast.makeText(this, "Registered Successfully", Toast.LENGTH_SHORT).show()
     }
 
 }
