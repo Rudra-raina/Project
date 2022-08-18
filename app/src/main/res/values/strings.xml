@@ -96,7 +96,7 @@
     <string name="furniture">FURNITURE</string>
     <string name="sports">COMMERCE</string>
     <string name="apparels">SCIENCE</string>
-    <string name="search_data">Search Data</string>
+    <string name="search_data">Search Products</string>
     <string name="add_to_cart">ADD TO CART</string>
     <string name="stationery">ENGLISH</string>
     <string name="go_to_cart">GO TO CART</string>
@@ -154,6 +154,7 @@
 
     <!--TODO Step 4: Add the string resources to the strings.xml file.-->
     <string name="title_sold_product_details">SOLD PRODUCT DETAILS</string>
+    <string name="nothingFound">No product found</string>
 
 
 </resources>

@@ -13,6 +13,12 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
+        android:id="@+id/navigation_search_product"
+        android:name="com.example.shopperista.activities.ui.fragments.SearchFragment"
+        android:label="Search Products"
+        tools:layout="@layout/fragment_search_products" />
+
+    <fragment
         android:id="@+id/navigation_products"
         android:name="com.example.shopperista.activities.ui.fragments.ProductsFragment"
         android:label="@string/title_products"
@@ -29,6 +35,8 @@
         android:name="com.example.shopperista.activities.ui.fragments.SoldProductsFragment"
         android:label="Sold Products"
         tools:layout="@layout/fragment_sold_products" />
+
+
 
 
 </navigation>

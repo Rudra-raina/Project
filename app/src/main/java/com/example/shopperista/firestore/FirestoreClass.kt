@@ -7,10 +7,7 @@ import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.shopperista.activities.ui.activities.*
-import com.example.shopperista.activities.ui.fragments.DashboardFragment
-import com.example.shopperista.activities.ui.fragments.OrdersFragment
-import com.example.shopperista.activities.ui.fragments.ProductsFragment
-import com.example.shopperista.activities.ui.fragments.SoldProductsFragment
+import com.example.shopperista.activities.ui.fragments.*
 import com.example.shopperista.models.*
 import com.example.shopperista.utils.Constants
 import com.example.shopperista.utils.ImageFileExtension
@@ -632,6 +629,19 @@ class FirestoreClass {
             .addOnFailureListener { e ->
                 fragment.hideProgressDialog()
                 Log.e(fragment.javaClass.simpleName,"Error while updating details",e)
+            }
+    }
+
+    fun getProduct(fragment:SearchFragment){
+        mFireStore.collection(Constants.PRODUCTS)
+            .get()
+            .addOnSuccessListener { document->
+                val list: ArrayList<Product> = ArrayList()
+                for(i in document.documents){
+                    val product=i.toObject(Product::class.java)!!
+                    list.add(product)
+                }
+                fragment.gotProduct(list)
             }
     }
 }

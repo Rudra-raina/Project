@@ -48,8 +48,8 @@
         android:contentDescription="@string/subtract"
         app:layout_constraintStart_toEndOf="@id/tv_cart_item_price"
         android:layout_marginStart="50dp"
-        android:src="@drawable/remove"
         android:layout_marginTop="65dp"
+        android:src="@drawable/remove_q"
         app:layout_constraintTop_toTopOf="parent"
         />
 <!--    android:src="@drawable/remove_three"-->

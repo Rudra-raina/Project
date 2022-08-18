@@ -180,7 +180,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:src="@drawable/phone_two"
+                        android:src="@drawable/phone_q"
                         android:contentDescription="@string/first_name" />
                     <com.example.shopperista.utils.CustomTextViewStyle
                         android:id="@+id/tv_mobile_number"

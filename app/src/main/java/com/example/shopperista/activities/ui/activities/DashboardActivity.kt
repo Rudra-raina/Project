@@ -28,7 +28,8 @@ class DashboardActivity : Base() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_products, R.id.navigation_dashboard, R.id.navigation_orders, R.id.navigation_sold_product
+                R.id.navigation_products, R.id.navigation_dashboard, R.id.navigation_orders, R.id.navigation_sold_product,
+                R.id.navigation_search_product
                 // Change this to our ID's
             )
         )

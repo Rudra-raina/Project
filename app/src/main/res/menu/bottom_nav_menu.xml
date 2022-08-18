@@ -6,6 +6,10 @@
         android:icon="@drawable/download"
         android:title="@string/title_dashboard"
         />
+    <item
+        android:id="@+id/navigation_search_product"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search_data" />
 
     <item
         android:id="@+id/navigation_products"
@@ -20,5 +24,7 @@
         android:id="@+id/navigation_sold_product"
         android:icon="@drawable/draw"
         android:title="@string/sold_products" />
+
+
 
 </menu>
